@@ -118,7 +118,6 @@ const renameGroup = asyncHandler(async (req, res) => {
   )
     .populate("users", "-password")
     .populate("groupAdmin", "-password");
-    console.log(updateChat);
   if (!updatedChat) {
     res.status(404);
     throw new Error("Chat Not Found");
